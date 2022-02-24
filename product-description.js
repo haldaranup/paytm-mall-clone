@@ -1,3 +1,16 @@
+function mrpmap() {
+    console.log(this.value)
+    var selected = this.value
+    document.querySelector("#total").textContent = "";
+    document.querySelector("#total").textContent = selected*obj1.mrp;
+}
+
+var selected = document.querySelector("#quantity").value||'1';
+document.querySelector('#quantity').addEventListener('change', mrpmap)
+
+
+
+
 var obj1 = JSON.parse(localStorage.getItem('product'));
 var image = document.createElement("img");
 image.setAttribute("src", obj1.imglink);
@@ -17,17 +30,19 @@ var mrp_footer = document.createElement("p")
 mrp_footer.textContent = 'Inclusive of all Taxes';
 mrp_footer.style.fontSize = "8px"
 
-document.querySelector("#pdt_data").append(tag1,mrp,mrp_footer);
+document.querySelector("#pdt_data").append(tag1, mrp, mrp_footer);
 
+document.querySelector("#total").textContent = obj1.mrp;
 
 var highlight = document.createElement("ul")
 
 obj1.pdt_highlights.forEach(element => {
-    console.log(element)
-    var point= document.createElement("li")
-    point.textContent=element
+    var point = document.createElement("li")
+    point.textContent = element
     highlight.append(point)
 });
+
+
 
 
 document.querySelector("#pdt_highlights").append(highlight);
