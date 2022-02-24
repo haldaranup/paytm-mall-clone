@@ -1,7 +1,5 @@
 function mrpmap() {
-    console.log(this.value)
     var selected = this.value
-    document.querySelector("#total").textContent = "";
     document.querySelector("#total").textContent = selected*obj1.mrp;
 }
 

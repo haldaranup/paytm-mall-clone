@@ -15,11 +15,14 @@
 }
 
 #pdt_description{
+
     height: 660px;
+    width:80%;
     background-color: white;
     display: flex;
     overflow: hidden;
     justify-content: space-evenly;
+    border: 1px solid red;
 
 }
 
