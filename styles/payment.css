@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+}
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.container{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* border: 1px solid red; */
+    width: 23%;
+    height: 80vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 5px;
+}
+.logo{
+    width: 25%;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+.logo img{
+    width: 100px;
+    
+}
+.option{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 10px;
+}
+.firstOption{
+    height: 62%;
+    border: 1px solid gray;
+    border-radius: 7px;
+    margin: 20px;
+}
+.firstOption>div{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.bank{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
