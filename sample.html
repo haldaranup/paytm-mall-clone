@@ -5,65 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <style>
-        .price-range-slider {
-            width: 100%;
-            float: left;
-            padding: 10px 20px;
-        }
-
-        .price-range-slider .range-value {
-            margin: 0;
-        }
-
-        .price-range-slider .range-value input {
-            width: 100%;
-            background: none;
-            color: #000;
-            font-size: 16px;
-            font-weight: initial;
-            box-shadow: none;
-            border: none;
-            margin: 20px 0 20px 0;
-        }
-
-        .price-range-slider .range-bar {
-            border: none;
-            background: #000;
-            height: 3px;
-            width: 50%;
-            margin-left: 8px;
-        }
-
-        .price-range-slider .range-bar .ui-slider-range {
-            background: #06b9c0;
-        }
-
-        .price-range-slider .range-bar .ui-slider-handle {
-            border: none;
-            border-radius: 20px;
-            background: #fff;
-            border: 2px solid #06b9c0;
-            height: 17px;
-            width: 17px;
-            top: -0.52em;
-            cursor: pointer;
-        }
-
-        .price-range-slider .range-bar .ui-slider-handle::before {
-            content: "$";
-            padding: 5px;
-        }
-
-        .price-range-slider .range-bar .ui-slider-handle+span {
-            background: #06b9c0;
-        }
-
-    </style>
-
+  
 </head>
 
 <body>
+
     <div class="price-range-slider">
 
         <p class="range-value">
@@ -81,7 +27,7 @@
           range: true,
           min: 130,
 	      max: 500,
-	      values: [ 130, 250 ],
+	      values: [ 130, 500 ],
           step: 1,
           animate: true,
           slide: function (event, ui) {
@@ -89,8 +35,8 @@
           }
       });
 
-      $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-	  " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    //   $( "#amount" ).val( "₹" + $( "#slider-range" ).slider( "values", 0 ) +
+	//   " - $" + $( "#slider-range" ).slider( "values", 1 ) );
     </script>
 </body>
 
