@@ -19,8 +19,6 @@ var selected = document.querySelector("#short").value;
 document.querySelector('#short').addEventListener('change', sortPrice)
 
 
-
-
 speedo_data = [
     {
         product_name: 'Speedo Voucher',
