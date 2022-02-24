@@ -8,7 +8,70 @@
     <title>Paytmmall.com: Speedo Vouchers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./product.css">
+    <style>
+        .price-range-slider {
+            width: 100%;
+            float: left;
+            /* padding: 10px 20px; */
+        }
 
+        .price-range-slider .range-value {
+            margin: 0;
+        }
+
+        .price-range-slider .range-value #amount {
+            width: 100%;
+            background: none;
+            color: #000;
+            font-size: 16px;
+            font-weight: initial;
+            box-shadow: none;
+            border: none;
+            margin: 20px 0 20px 0;
+        }
+
+        .price-range-slider .range-bar {
+            border: none;
+            background: #000;
+            height: 3px;
+            margin-top: 50px;
+            padding-left: none;
+        }
+
+        .price-range-slider .range-bar .ui-slider-range {
+            background: darkorange;
+        }
+
+        .price-range-slider .range-bar .ui-slider-handle {
+            border: none;
+            border-radius: 16px;
+            background: darkorange;
+            height: 32px;
+            width: 32px;
+            top: -1em;
+            cursor: pointer;
+        }
+
+        .price-range-slider ::before {
+            content: '\20B9';
+            text-decoration: underline;
+            font-size: 24px;
+            padding: 10px;
+            color: white;
+            align-content: center;
+            box-sizing: border-box;
+
+
+        }
+
+        .price-range-slider .range-bar .ui-slider-handle+span {
+            background: #06b9c0;
+        }
+        
+        
+
+    </style>
+ 
 </head>
 
 <body>
@@ -28,15 +91,19 @@
                     Fashion
                 </div>
 
-                <div id="price_filter">Price </div>
+                <div class="price-range-slider">
 
-                <!-- <div id="range_slider">Slider</div>
-                <div id="range_boxes">
-                    <div id="min">Min</div>
-                    <div>to</div>
-                    <div id="min">Max</div>
-
-                </div> -->
+                    
+                    <div id="slider-range" class="range-bar">
+                    
+                    </div>
+                    <div id="rangevalue">
+                    <p class="range-value">
+                        <input type="text" id="amount" readonly>
+                        <div id="pricevalue"></div>
+                    </p>
+                </div>
+                </div>
 
                 <div id="brands_title">
                     <div>Brands</div>
@@ -78,5 +145,21 @@
 </body>
 
 <script type="text/javascript" src="product.js"></script>
-
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script> 
+  <script>
+  $("#slider-range").slider({
+          orientation: "horizontal",
+          range: true,
+          min: 250,
+	      max: 60000,
+	      values: [ 500, 50000 ],
+          step: 1,
+          animate: true,
+          slide: function (event, ui) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+          }
+      });
+    </script>
 </html>

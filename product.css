@@ -26,7 +26,8 @@
         font-size: 16px;
         background-color: rgb(255, 255, 255);
         padding-left: 16px;
-        padding-right: 16px;
+        padding-right: 32px;
+
 
     }
 
@@ -40,16 +41,19 @@
     }
 
     #price_filter {
-        padding-top: 10px;
+        padding-top: 50px;
         font-size: 20px;
         border-bottom: 1px solid lightgray;
         padding-bottom: 2em;
+        border: 1px solid red;
         
     }
 
     #brands_title{
         font-size: 16px;
         margin-right: 10px;
+        border-top: 1px solid lightgray;
+
     }
 
     #product_sort_products {
