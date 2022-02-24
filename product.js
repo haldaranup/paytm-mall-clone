@@ -1,3 +1,26 @@
+function sortPrice() {
+
+    var selected = document.querySelector("#short").value;
+    document.querySelector("#product_products").textContent = "";
+   if (selected == "4") {
+        speedo_data.sort(function (a, b) {
+            return a.mrp - b.mrp;
+        });
+    }
+    else if (selected == "5") {
+        speedo_data.sort(function (a, b) {
+            return b.mrp - a.mrp;
+        });
+    }
+    mapping_data(speedo_data)
+}
+
+var selected = document.querySelector("#short").value;
+document.querySelector('#short').addEventListener('change', sortPrice)
+
+
+
+
 speedo_data = [
     {
         product_name: 'Speedo Voucher',
