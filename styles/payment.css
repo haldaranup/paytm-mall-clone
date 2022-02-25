@@ -50,8 +50,31 @@
     justify-content: space-between;
     
 }
-.bank{
+.firstOption>.bank{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 
+}
+input{
+    height: 20px;
+}
+
+.cardDetails{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+button{
+    display: none;
+    border: none;
+    background-color: #030235;
+    color: #ffee00;
+    width: 140px;
+    height: 40px;
+    margin: auto;
+    border-radius: 4px;
+    cursor: pointer;
 }
