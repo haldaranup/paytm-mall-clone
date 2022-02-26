@@ -90,6 +90,7 @@
     }
 
     #product_products {
+        min-width: 1260px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 315px);
