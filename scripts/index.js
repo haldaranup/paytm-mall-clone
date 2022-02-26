@@ -1,22 +1,19 @@
-import { navbar } from "/components/navbar.js";
 
-let nav = document.getElementById("nav");
-nav.innerHTML = navbar();
 
-window.onscroll = function () {
-  myFunction();
-};
+let click = document.querySelectorAll(".click")
+// console.log(click)
+click.forEach(el => {
+    el.addEventListener("click", () => {
 
-var navShow = document.getElementById("navDetails");
-var sticky = navShow.offsetTop;
+        localStorage.setItem("voucher", JSON.stringify(el.ariaValueText))
+        window.location.href = "product.html"
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navShow.classList.add("sticky");
-    navShow.style.backgroundColor = "white";
-  } else {
-    navShow.classList.remove("sticky");
-  }
-}
-let user = document.createElement("div")
+        // console.log(el.ariaValueText)
+
+    })
+})
+
+
+
+
 

@@ -5,33 +5,52 @@
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
 
 }
+.none{
+    display: none;
+    width: 20px;
+    /* position: fixed; */
+    right: 3%;
+    top: 6%;
+    z-index: 100;
+}
+/* <div class="topNavStyle"></div> */
 
-/* navbar starts here */
+/* navbar starts here  */
 .topNavStyle {
     height: 4vh;
     width: 100%;
     background-color: #f4f4f4;
 }
 
+
 #mainLogo {
     width: 10%;
     margin: auto;
     margin-top: 2vh;
+   
 }
 
-#mainLogo img {
-    height: 4.8vh;
-    width: 70%;
-}
 
 #navDetails {
+   
     height: 80px;
     display: flex;
     justify-content: space-around;
     text-align: center;
     align-items: center;
     margin-top: 1vh;
+    
     /* border: 1px solid black; */
+}
+.mt-10{
+    margin-top: 13px;
+}
+
+.sticky {
+    position: fixed;
+    top: -15px;
+    width: 100%;
+    z-index: 100;
 }
 
 #navDetails a {
@@ -56,17 +75,21 @@
     display: flex;
     justify-content: space-around;
     cursor: pointer;
+    align-items: center;
     /* border: 1px solid black; */
 }
 
 #category img {
     height: 18px;
 }
-
+#category a{
+    margin-bottom: -16px;
+}
 #test {
     width: 76%;
     display: flex;
     justify-content: space-between;
+    
     /* border: 1px solid black; */
 }
 
@@ -85,7 +108,7 @@
 #test, #category {
     border: 1px solid #cecece;
     border-radius: 3.5px;
-    padding: 10px;
+    padding: 4px;
 }
 
 /* left nav ends here */
@@ -117,15 +140,55 @@
     /* border: 1px solid rgb(104, 71, 71);  */
 }
 
-.sticky {
-    position: fixed;
-    top: -15px;
-    width: 100%;
+/* @media screen and (max-width:1100px){
+    .topNavStyle{
+        display: none;
+    }
+    #mainLogo>a img{
+    height: 25px;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+}
+#category{
+    width: 15%;
+    margin-left: 80px;
 }
 
-#hh {
-    height: 100vh;
-}
+    #nav{
+        display: grid;
+        grid-template-columns: 1fr 10fr 1fr;
+        align-items: center;
+        border: none;
+        position:  fixed;
+        top: 0px;
+        z-index: 100;
+
+    }
+    #mainLogo{
+        width: 100%;
+    }
+   
+    .none{
+        display: block;
+    }
+    .hidden{
+        visibility: hidden;
+    }
+    #userOptions{
+        flex-direction: column;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    background-color: white;
+    }
+}  */
+
+
+
 
 /* right nav ends here */
 
@@ -133,32 +196,6 @@
 
 
 /* main container starts here */
-#container {
-    display: flex;
-    justify-content: space-between;
-    width: 96%;
-    margin: auto;
-    gap: 5%;
-}
-
-#container img {
-    border-radius: 6px;
-}
-
-.img1 img {
-    height: 76vh;
-    width: 104%;
-}
-
-.box2 {
-    display: grid;
-    gap: 24px;
-}
-
-.img2 img, .img3 img {
-    width: 100%;
-    height: 36vh;
-}
 
 /* main container ends here */
 
