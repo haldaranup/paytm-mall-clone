@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/nav2.css">
+    <link rel="stylesheet" href="styles/footer_ques.css">
+
+</head>
+
+<body>
+
+    <div id="nav"></div>
+
+    <div id="product_body">
+        <div id="top_path">
+            <div>Home / Deals For you / Fashion / <span style="color: black;">Footwear</span></div>
+        </div>
+        <div id="pdt_description">
+            <div id="pdt_image"></div>
+            <div>
+
+                <p id="name">Gift Card </p>
+                <p id="mrp"> MRP <span id="MRP"><span></p>
+                <div id="mrpfooter">Inclusive of all Taxes</div>
+                <div id="options">
+                    <select id="quantity">
+                        <option value='1'>Quantity 1</option>
+                        <option value='2'>Quantity 2</option>
+                        <option value='3'>Quantity 3</option>
+                        <option value='4'>Quantity 4</option>
+                        <option value='5'>Quantity 5</option>
+                    </select>
+                </div>
+                <h3>Product Highlights</h3>
+                <ul type="disc">
+                    <li>Partial redemption of the Gift Card is not allowed.</li>
+                    <li>Valid at select Max Lifestyle Home Centre and Melange stores in India.</li>
+                    <li>Valid for 1 year.</li>
+                </ul>
+
+                <button id="button1"> Buy for ₹ <span id="total"></span></button>
+            </div>
+        </div>
+
+    </div>
+    <div id="foot"></div>
+</body>
+
+
+
+</html>
+<script type="module">
+    import { navbar } from "./components/navbar.js"
+    let nav = document.getElementById("nav")
+    nav.innerHTML = navbar()
+
+    let Total = JSON.parse(localStorage.getItem("totalCart"))
+    if (Total) {
+        document.getElementById("totalPrice").textContent = Total
+    }
+
+    document.getElementById("totalPrice").addEventListener("click", () => {
+        window.location.href = "cartPage.html"
+    })
+
+
+    import { footer } from "./components/footer.js"
+    let foot = document.getElementById("foot")
+    foot.innerHTML = footer()
+
+    // displaying user name at the top 
+    let data = JSON.parse(localStorage.getItem("userData"))
+    // console.log(data)
+    if (data != undefined) {
+        let userName = document.querySelector("#u-name")
+        userName.textContent = data.username
+    }
+</script>
+<script type="text/javascript" src="scripts/checkout.js"></script>
