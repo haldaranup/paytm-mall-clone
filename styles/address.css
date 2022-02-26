@@ -110,6 +110,7 @@ label {
     border: 1px solid orange;
     color: orange;
     text-align: center;
+    cursor: pointer;
 }
 
 #change:hover {

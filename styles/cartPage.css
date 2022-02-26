@@ -39,6 +39,7 @@ button{
     background-color:#ff6205 ;
     font-size: 1.2em;
     color: white;
+    cursor: pointer;
 }
 #payment{
     position: fixed;

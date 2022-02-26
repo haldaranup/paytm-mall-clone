@@ -194,3 +194,6 @@
 .price-range-slider .range-bar .ui-slider-handle+span {
     background: #06b9c0;
 }
+img{
+    cursor: pointer;
+}

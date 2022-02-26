@@ -91,4 +91,5 @@ button{
     font-weight: bold;
     background-color: orangered;
     align-self: flex-end;
+    cursor: pointer;
 }
