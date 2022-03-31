@@ -1,7 +1,5 @@
-
-
 const footer = () => {
-    return `   <div class="flex-4">
+  return `   <div class="flex-4">
     <div>
         <img src="https://cdn-icons-png.flaticon.com/128/812/812327.png" alt="">
         <h5 class="h5">24x7 Help</h5>
@@ -141,8 +139,7 @@ const footer = () => {
   </div>
 </div>
 </div>
-`
-}
+`;
+};
 
-
-export { footer }
+export { footer };

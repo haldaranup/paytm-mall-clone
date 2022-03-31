@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Orders</title>
+    <link rel="icon" href="logo/favicon.png" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/nav2.css" />
+    <link rel="stylesheet" href="styles/orders.css" />
+    <link rel="stylesheet" href="styles/footer_ques.css" />
+  </head>
+  <body>
+    <nav id="nav"></nav>
+    <div class="order">
+      <h2>My Orders</h2>
+      <div class="secNav">
+        <div class="items">
+          <p class="shop">Shopping Orders</p>
+          <p class="deal">Deals</p>
+        </div>
+      </div>
+    </div>
+    <footer id="footer"></footer>
+  </body>
+</html>
+
+<!-- image :"https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPMOTUS-SOLI..."
+brand : "Adidas" name : "Men Solid Regular Shorts Pack Of 3" price : "879"
+stPrice : "1299" 
+discount : "32%" 
+size : "M" 
+createdAt :
+2022-03-30T12:42:15.934+00:00 updatedAt : 2022-03-30T12:42:15.934+00:00 
+category
+: "Men" -->
+
+<script type="module">
+  import { navbar } from "./components/navbar.js";
+  import { footer } from "./components/footer.js";
+
+  let nav = document.getElementById("nav");
+  nav.innerHTML = navbar();
+
+  let foot = document.getElementById("footer");
+  foot.innerHTML = footer();
+
+  let shop = document.querySelector(".shop");
+  let deal = document.querySelector(".deal");
+
+  let toggleFunc = (f, s)=>{
+    f.style.color = "#ff5e00";
+    f.style.fontWeight = "bold";
+    f.style.textDecoration = "underline"
+    s.style.textDecoration = "initial"
+    s.style.fontWeight = "initial";
+    s.style.color = "#444444";
+  }
+
+  shop.addEventListener("click", () => {
+    toggleFunc(shop, deal)
+  });
+  deal.addEventListener("click", () => {
+    toggleFunc(deal, shop)
+  });
+</script>

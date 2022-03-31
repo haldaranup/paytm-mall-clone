@@ -1,0 +1,26 @@
+body{
+    background-color: #f5f7f7;
+}
+.secNav{
+    width: 90%;
+    height: 7.5vh;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+h2{
+    font-size: 1.25rem;
+    margin: 3.5vh 5%;
+}
+.secNav>div{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+}
+.items p{
+    cursor: pointer;
+    color: #444444;
+}
