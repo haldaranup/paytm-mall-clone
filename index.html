@@ -302,7 +302,8 @@
     })
 
 
-    //*******************************************************
+
+    //******************
     // it is used for disPlay the name on the navbar 
     const disPlayName = async () => {
 
@@ -319,8 +320,14 @@
         let data = await res.json()
         // console.log(data)
         let userName = document.querySelector("#u-name")
-        userName.textContent = data.name
-        return data
+        if (!data.name) {
+            userName.textContent = "Login/SignUp"
+        }
+        else {
+            userName.textContent = data.name
+            return data
+
+        }
     }
     let unknown = disPlayName()
 
@@ -345,14 +352,15 @@
         window.location.href = "qrsign.html"
     })
 
-
+    // ****************** for all bottom section************************//
     let fashion = document.querySelectorAll(".fashion")
     console.log(fashion)
     fashion.forEach(el => {
         el.addEventListener("click", () => {
             let value = el.ariaValueText
             console.log(value)
-            localStorage.setItem("fashionValue", JSON.stringify(value))
+            // localStorage.setItem("fashionValue", JSON.stringify(value))
+            document.cookie = "fashion=" + value
             window.location.href = "fashionPage.html"
         })
     })

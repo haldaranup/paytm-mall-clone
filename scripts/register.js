@@ -7,7 +7,7 @@ const signin = async (event) => {
       email: document.querySelector(".email").value,
       password: document.querySelector(".password").value,
     };
-    // console.log(user_data)
+    console.log(user_data);
     if (
       user_data.name != "" &&
       user_data.email != "" &&
@@ -24,7 +24,7 @@ const signin = async (event) => {
       });
       let data = await res.json();
       console.log(data);
-      if (data.errors) {
+      if (data.errors || data.errors) {
         console.log("false");
         window.location.href = "register.html";
       } else if (data.message) {

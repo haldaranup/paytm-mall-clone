@@ -17,7 +17,7 @@ const appendData = async (parent, start, end) => {
     for (let i = start; i <= end; i++) {
       let div = document.createElement("div");
       div.setAttribute("class", "col");
-      div.setAttribute("class", "click");
+      // div.setAttribute("class", "click");
       div.addEventListener("click", () => {
         // localStorage.setItem("coupon", JSON.stringify(data[i].name));
 
@@ -61,7 +61,7 @@ const appendDataSpecial = async (parent, start, end) => {
     for (let i = start; i <= end; i++) {
       let div = document.createElement("div");
       div.setAttribute("class", "col");
-      div.setAttribute("class", "click");
+      // div.setAttribute("class", "click");
       div.addEventListener("click", () => {
         // localStorage.setItem("coupon", JSON.stringify(data[i].name));
         console.log(data[i].name);

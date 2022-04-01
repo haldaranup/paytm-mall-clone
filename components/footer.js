@@ -1,7 +1,5 @@
-
-
 const footer = () => {
-    return `   <div class="flex-4">
+  return `   <div class="flex-4">
     <div>
         <img src="https://cdn-icons-png.flaticon.com/128/812/812327.png" alt="">
         <h5 class="h5">24x7 Help</h5>
@@ -114,12 +112,12 @@ const footer = () => {
 
 <div id="inner_bottom_info">
   <div class="inner_bottom">
-  <div aria-valuetext="men" class="fashion">Men's Fashion <i class="fa-solid fa-sort-down"></i></div>
+  <div aria-valuetext="Men" class="fashion">Men's Fashion <i class="fa-solid fa-sort-down"></i></div>
     <div>Electronics <i class="fa-solid fa-sort-down"></i></div>
     <div>Stationery <i class="fa-solid fa-sort-down"></i></div>
   </div>
   <div class="inner_bottom">
-  <div aria-valuetext="women" class="fashion">Women's Fashion <i class="fa-solid fa-sort-down"></i></div>
+  <div aria-valuetext="Women" class="fashion">Women's Fashion <i class="fa-solid fa-sort-down"></i></div>
     <div>Mobles <i class="fa-solid fa-sort-down"></i></div>
     <div>Home & Kitchen <i class="fa-solid fa-sort-down"></i></div>
     
@@ -141,8 +139,7 @@ const footer = () => {
   </div>
 </div>
 </div>
-`
-}
+`;
+};
 
-
-export { footer }
+export { footer };

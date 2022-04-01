@@ -1,9 +1,9 @@
 ///*************** cookies ******************** */
-
+alert("after type your card number press enter get for payment button");
 const cookies = (name) => {
   // console.log(name);
   let tokenArr = document.cookie.split(";");
-  //   console.log(tokenArr);
+  // console.log(tokenArr);
   for (let i = 0; i < tokenArr.length; i++) {
     let subArr = tokenArr[i].split("=");
     // console.log(subArr[0]);

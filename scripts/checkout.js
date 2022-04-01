@@ -75,7 +75,7 @@ async function totalPrice() {
 }
 //************** go to payment page**************** */
 const appendData = async () => {
-  alert("please choose more than 1 quantity");
+  alert("please choose  quantity");
   let data = await fetchData(`http://localhost:5901/coupon?q=${productId}`);
   document.getElementById("name").textContent = `${data.name} Gift Cards`;
 
