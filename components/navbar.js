@@ -23,7 +23,7 @@ function navbar() {
   
       <div id="userOptions" class="hidden" >
         <div id="order">
-          <img id="orderImg" src="logo/to-do-list.png" alt="" /><p class="mt-10">My
+          <img id="orderImg" src="logo/to-do-list.png" alt="" /><p class="mt-10 " >My
             Orders</p>
         </div>
   
@@ -34,7 +34,7 @@ function navbar() {
         <div id="user"><img id="orderImg" src="logo/user-profile.png" alt="" /><p class="mt-10" id="u-name">Login/SignUp</p></div>
       </div>
     </div>
-    <img src="logo/menu.png" class="none" alt="" id=""click1>`
+    <img src="logo/menu.png" class="none" alt="" id=""click1>`;
 }
 
 export { navbar };
