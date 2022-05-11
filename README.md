@@ -53,5 +53,5 @@ Paytm Mall strives hard to make your online shopping a more pleasant and cost-ef
 
 
 Login page
-![image](https://user-images.githubusercontent.com/95843558/167845572-58b46c17-d1ce-4186-a875-d85b133d6bef.png)
+![image](https://user-images.githubusercontent.com/95843558/167846129-c8a671c8-ca6b-42c0-ac20-0bf380b19a79.png)
 
