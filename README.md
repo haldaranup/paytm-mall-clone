@@ -38,3 +38,20 @@ Paytm Mall strives hard to make your online shopping a more pleasant and cost-ef
 
 
 ![image](https://user-images.githubusercontent.com/95843558/167842807-65961db8-ff7c-4594-acc2-d9a9ec46e54f.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Login page
+![image](https://user-images.githubusercontent.com/95843558/167845572-58b46c17-d1ce-4186-a875-d85b133d6bef.png)
+
