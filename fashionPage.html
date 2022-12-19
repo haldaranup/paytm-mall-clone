@@ -62,7 +62,7 @@
 
     import { footer } from "./components/footer.js"
 
-
+    import { cookies } from "./components/cookies.js"
     let nav = document.getElementById("nav")
     nav.innerHTML = navbar()
 
@@ -82,12 +82,34 @@
     })
 
 
-    // displaying user name at the top 
-    let data = JSON.parse(localStorage.getItem("userData"))
-    // console.log(data)
-    if (data != undefined) {
-        let userName = document.querySelector("#u-name")
-        userName.textContent = data.username
-    }
 
+
+    //***********************************************
+
+    // it is used for disPlay the name on the navbar 
+    const disPlayName = async () => {
+
+        let subArr = cookies("token")
+        // console.log("token", subArr)
+        let res = await fetch("http://localhost:5901/user", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                // Authorization: `Bearer ${token}`,
+                Authorization: `Bearer ${subArr}`,
+            },
+        });
+        let data = await res.json()
+        // console.log(data)
+        let userName = document.querySelector("#u-name")
+        if (!data.name) {
+            userName.textContent = "Login/SignUp"
+        }
+        else {
+            userName.textContent = data.name
+            return data
+
+        }
+    }
+    let unknown = disPlayName()
 </script>
